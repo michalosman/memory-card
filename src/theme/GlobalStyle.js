@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   header {
-    font-size: 2.4rem;
+    font-size: 3rem;
   }
   
   h1,
