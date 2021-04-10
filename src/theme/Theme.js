@@ -8,6 +8,6 @@ export const Theme = {
     darkHover: '#222',
     darkActive: '#111',
   },
-};
+}
 
-export default Theme;
+export default Theme
