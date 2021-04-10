@@ -21,8 +21,8 @@ const ScoreboardWrapper = styled.div`
 `
 
 const Title = styled.h2`
-  font-size: 3rem;
   padding: 0.5rem;
+  font-size: 3rem;
 `
 
 const Scores = styled.div`
@@ -33,13 +33,13 @@ const Scores = styled.div`
 `
 
 const CurrentScore = styled.div`
-  font-size: 2rem;
   padding: 0.5rem;
+  font-size: 2rem;
 `
 
 const BestScore = styled.div`
-  font-size: 2rem;
   padding: 0.5rem;
+  font-size: 2rem;
 `
 
 export default Scoreboard

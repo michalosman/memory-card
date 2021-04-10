@@ -7,13 +7,19 @@ import Card from './Card'
 // * Use Poke API
 
 const CardsGrid = () => {
-  return (
-    <CardsGridWrapper>
-      <Card />
-    </CardsGridWrapper>
-  )
+  const cards = []
+
+  for (let i = 0; i < 8; i++) {
+    cards.push(<Card />)
+  }
+
+  return <CardsGridWrapper>{cards}</CardsGridWrapper>
 }
 
-const CardsGridWrapper = styled.div``
+const CardsGridWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+`
 
 export default CardsGrid
