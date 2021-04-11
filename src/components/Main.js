@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Scoreboard from './Scoreboard/Scoreboard'
 import CardsGrid from './CardsGrid/CardsGrid'
 
-const Main = () => {
+const Main = ({pokemons}) => {
   return (
     <MainWrapper>
       <Scoreboard></Scoreboard>

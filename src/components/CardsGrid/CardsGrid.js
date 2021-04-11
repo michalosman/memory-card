@@ -10,7 +10,7 @@ const CardsGrid = () => {
   const cards = []
 
   for (let i = 0; i < 8; i++) {
-    cards.push(<Card />)
+    cards.push(<Card key={i} />)
   }
 
   return <CardsGridWrapper>{cards}</CardsGridWrapper>
