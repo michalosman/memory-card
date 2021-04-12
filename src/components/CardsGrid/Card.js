@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import examplePhoto from '../../assets/example.png'
 
-const Card = () => {
+const Card = ({ pokemon }) => {
   return (
     <CardWrapper>
-      <Image src={examplePhoto} alt="Pikachu" />
-      <Name>Pikachu</Name>
+      <Image src={pokemon.image} alt={pokemon.name} />
+      <Name>{pokemon.name}</Name>
     </CardWrapper>
   )
 }

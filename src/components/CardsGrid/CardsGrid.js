@@ -2,18 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import Card from './Card'
 
-// TODO
-// * implement basic grid and cards
-// * Use Poke API
+const CardsGrid = ({ pokemons }) => {
+  const pokemonCards = pokemons.map((pokemon) => (
+    <Card key={pokemon.id} pokemon={pokemon} />
+  ))
 
-const CardsGrid = () => {
-  const cards = []
-
-  for (let i = 0; i < 8; i++) {
-    cards.push(<Card key={i} />)
-  }
-
-  return <CardsGridWrapper>{cards}</CardsGridWrapper>
+  return <CardsGridWrapper>{pokemonCards}</CardsGridWrapper>
 }
 
 const CardsGridWrapper = styled.div`

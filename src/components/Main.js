@@ -7,7 +7,7 @@ const Main = ({pokemons}) => {
   return (
     <MainWrapper>
       <Scoreboard></Scoreboard>
-      <CardsGrid></CardsGrid>
+      <CardsGrid pokemons={pokemons}></CardsGrid>
     </MainWrapper>
   )
 }

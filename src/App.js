@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
+import { capitalizeFirstLetter, shuffleArray, POKEMONS_AMOUNT } from './utils'
 import axios from 'axios'
 
 const App = () => {
   const [pokemons, setPokemons] = useState([])
-  const POKEMONS_AMOUNT = 12
 
   useEffect(() => {
     async function fetchPokemons() {
@@ -19,23 +19,14 @@ const App = () => {
         const name = capitalizeFirstLetter(pokemon.data.name)
         const image = pokemon.data.sprites.front_default
         const clicked = false
-        const newPokemon = { id, name, image, clicked }
-        newPokemons.push(newPokemon)
+        newPokemons.push({ id, name, image, clicked })
       }
+      shuffleArray(newPokemons)
       setPokemons(newPokemons)
     }
 
     fetchPokemons()
-    console.log(pokemons)
   }, [])
-
-  const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1)
-  }
-
-  // load pokemons from api
-  // load best score from localStorage
-  // handle game
 
   return (
     <>
