@@ -1,6 +1,6 @@
-# Memory game
+# Memory card game
 
-[Live Demo](https://michalosman.github.io/memory-game/) :point_left:
+[Live Demo](https://michalosman.github.io/memory-card/) :point_left:
 
 ## Getting started
 
