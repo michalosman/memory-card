@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
-import { capitalizeFirstLetter, shuffleArray, POKEMONS_AMOUNT } from './utils'
+import { capitalizeFirstLetter, shuffleArray } from './utils'
 import axios from 'axios'
 
 const App = () => {
+  const POKEMONS_AMOUNT = 12
   const [pokemons, setPokemons] = useState([])
 
   useEffect(() => {

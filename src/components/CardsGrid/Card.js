@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import examplePhoto from '../../assets/example.png'
 
 const Card = ({ pokemon }) => {
   return (
@@ -14,8 +13,8 @@ const Card = ({ pokemon }) => {
 const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
   width: 150px;
+  border-radius: 20px;
   background-color: ${({ theme }) => theme.colors.light};
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: transform 0.3s;

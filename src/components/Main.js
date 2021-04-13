@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Scoreboard from './Scoreboard/Scoreboard'
 import CardsGrid from './CardsGrid/CardsGrid'
 
-const Main = ({pokemons}) => {
+const Main = ({ pokemons }) => {
   return (
     <MainWrapper>
       <Scoreboard></Scoreboard>
@@ -18,7 +18,7 @@ const MainWrapper = styled.main`
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  padding: 2rem;
+  padding: 4rem;
   margin-bottom: 3.5rem;
 `
 

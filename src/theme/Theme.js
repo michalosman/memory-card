@@ -9,6 +9,8 @@ export const Theme = {
     darkActive: '#111',
     darkBorder: '#444',
     secondaryLight: '#ddd',
+    green: '#ffb5b5',
+    red: '#b5ffb5',
   },
 }
 
