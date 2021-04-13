@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import Card from './Card'
 
-const CardsGrid = ({ pokemons }) => {
+const CardsGrid = ({ pokemons, handleCardClick }) => {
   const pokemonCards = pokemons.map((pokemon) => (
-    <Card key={pokemon.id} pokemon={pokemon} />
+    <Card key={pokemon.id} pokemon={pokemon} handleCardClick={handleCardClick}/>
   ))
 
   return <CardsGridWrapper>{pokemonCards}</CardsGridWrapper>

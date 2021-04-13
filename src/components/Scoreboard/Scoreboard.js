@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Scoreboard = () => {
+const Scoreboard = ({ currentScore, bestScore }) => {
   return (
     <ScoreboardWrapper>
-      <CurrentScore>Current score: 10</CurrentScore>
-      <BestScore>Best score: 20</BestScore>
+      <CurrentScore>Current score: {currentScore}</CurrentScore>
+      <BestScore>Best score: {bestScore}</BestScore>
     </ScoreboardWrapper>
   )
 }

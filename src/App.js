@@ -2,36 +2,52 @@ import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
-import { capitalizeFirstLetter, shuffleArray } from './utils'
-import axios from 'axios'
+import { fetchPokemons, shuffleArray } from './utils'
 
 const App = () => {
   const POKEMONS_AMOUNT = 12
   const [pokemons, setPokemons] = useState([])
+  const [clickedPokemons, setClickedPokemons] = useState([])
+  const [currentScore, setCurrentScore] = useState(0)
+  const [bestScore, setBestScore] = useState(0)
 
   useEffect(() => {
-    async function fetchPokemons() {
-      const newPokemons = []
-
-      for (let i = 1; i <= POKEMONS_AMOUNT; i++) {
-        const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${i}`
-        const pokemon = await axios.get(pokemonUrl)
-        const id = pokemon.data.id
-        const name = capitalizeFirstLetter(pokemon.data.name)
-        const image = pokemon.data.sprites.front_default
-        const clicked = false
-        newPokemons.push({ id, name, image, clicked })
-      }
+    fetchPokemons(POKEMONS_AMOUNT).then((newPokemons) =>
       setPokemons(shuffleArray(newPokemons))
-    }
-
-    fetchPokemons()
+    )
   }, [])
+
+  const handleCardClick = (e) => {
+    const pokemonName = e.target.parentNode.lastChild.textContent
+    playRound(pokemonName)
+    setPokemons(shuffleArray(pokemons))
+  }
+
+  const playRound = (pokemonName) => {
+    if (clickedPokemons.includes(pokemonName)) {
+      resetGame()
+    } else {
+      const newScore = currentScore + 1
+      if (newScore > bestScore) setBestScore(newScore)
+      setCurrentScore(newScore)
+      setClickedPokemons((prevState) => [...prevState, pokemonName])
+    }
+  }
+
+  const resetGame = () => {
+    setClickedPokemons([])
+    setCurrentScore(0)
+  }
 
   return (
     <>
       <Header />
-      <Main pokemons={pokemons} />
+      <Main
+        pokemons={pokemons}
+        handleCardClick={handleCardClick}
+        currentScore={currentScore}
+        bestScore={bestScore}
+      />
       <Footer />
     </>
   )

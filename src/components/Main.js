@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import Scoreboard from './Scoreboard/Scoreboard'
 import CardsGrid from './CardsGrid/CardsGrid'
 
-const Main = ({ pokemons }) => {
+const Main = ({ pokemons, currentScore, bestScore, handleCardClick }) => {
   return (
     <MainWrapper>
-      <Scoreboard></Scoreboard>
-      <CardsGrid pokemons={pokemons}></CardsGrid>
+      <Scoreboard currentScore={currentScore} bestScore={bestScore}></Scoreboard>
+      <CardsGrid pokemons={pokemons} handleCardClick={handleCardClick}></CardsGrid>
     </MainWrapper>
   )
 }
