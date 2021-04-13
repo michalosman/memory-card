@@ -16,7 +16,7 @@ const CardWrapper = styled.div`
   flex-direction: column;
   border-radius: 20px;
   width: 150px;
-  background-color: #fabf8f;
+  background-color: ${({ theme }) => theme.colors.light};
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: transform 0.3s;
 

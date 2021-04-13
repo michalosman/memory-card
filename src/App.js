@@ -21,8 +21,7 @@ const App = () => {
         const clicked = false
         newPokemons.push({ id, name, image, clicked })
       }
-      shuffleArray(newPokemons)
-      setPokemons(newPokemons)
+      setPokemons(shuffleArray(newPokemons))
     }
 
     fetchPokemons()
