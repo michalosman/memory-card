@@ -18,6 +18,7 @@ const CardWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.light};
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: transform 0.3s;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.05);
