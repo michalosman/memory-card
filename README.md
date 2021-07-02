@@ -16,5 +16,4 @@ npm start
 - [React](https://reactjs.org/)
 - [react-icons](https://www.npmjs.com/package/react-icons)
 - [styled-components](https://styled-components.com/)
-- [axios](https://github.com/axios/axios)
 - [PokeAPI](https://pokeapi.co/)
