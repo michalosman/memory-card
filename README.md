@@ -1,5 +1,7 @@
 # Memory card game
 
+Memory card game created with React.
+
 [Live Demo](https://michalosman.github.io/memory-card/) :point_left:
 
 ## Getting started
